@@ -1,0 +1,179 @@
+<html>
+<head>
+	<title>WDI Project Two</title>
+  <script src="test.js"></script>
+</head>
+<body>
+
+    <div id="friend">Friends
+
+      <ul>
+
+        <li></li>
+
+      </ul>
+
+    </div>
+
+    <div id="family">Family
+
+      <ul>
+
+        <li></li>
+
+      </ul>
+
+    </div>
+
+    <div id="work">Work
+
+      <ul>
+
+        <li></li>
+
+      </ul>
+
+    </div>
+
+     <button id="createbutton"></button>
+
+     <button id="deletebutton"></button>
+
+
+
+   <script type="text/javascript">
+
+    var friends = [" Jeff " , " Joe " , " Adrian " , " Neel " , " JeffK " , " Sean "]
+
+    var family = [ " Mom " , " Victor Cruz " , " Eli Manning " , " Henrik Lunqvist " , " Lebron James "]
+
+    var coworkers = [ " Bill Gates " , " Mark Cuban " , " Mark Zuckerberg " , " The Google Guys "]
+
+    var button = document.getElementById("createbutton")
+    button.innerText = "Add"
+    document.body.appendChild(button)
+
+    button.addEventListener("click", function() {
+
+          var friend = createFriend(friends)
+
+          var div = document.getElementById("friend")
+
+            var ul = document.querySelector("ul")
+
+            var li = document.querySelector("li")
+
+              li.innerText = friend
+
+
+              div.appendChild(ul)
+              ul.appendChild(li)
+              document.body.appendChild(div)
+              document.body.appendChild(ul)
+
+              /////////////////////////////
+
+            var fam = createFamily(family)
+
+            var divTwo = document.getElementById("family")
+
+            var ul = document.querySelector("ul")
+
+            var li = document.querySelector("li")
+
+            li.innerText = fam
+
+             divTwo.appendChild(ul)
+              ul.appendChild(li)
+              document.body.appendChild(divTwo)
+              document.body.appendChild(ul)
+
+
+              /////////////////////////////
+
+              var work = createCoworkers(coworkers)
+
+              var divThree = document.getElementById("work")
+
+                var ul = document.querySelector("ul")
+
+                var li = document.querySelector("li")
+
+                li.innerText = work
+
+                 divThree.appendChild(ul)
+                  ul.appendChild(li)
+
+                document.body.appendChild(divThree)
+                document.body.appendChild(ul)
+
+
+           });
+
+       var deleteButton = document.getElementById("deletebutton")
+       deleteButton.innerText = "Delete"
+       document.body.appendChild(deleteButton)
+
+       deleteButton.addEventListener("click", function() {
+
+          var friend = deleteFriend(friends)
+
+            var div = document.getElementById("friend")
+
+              var ul = document.querySelector("ul")
+
+              var li = document.querySelector("li")
+
+              li.innerText = friend
+
+
+              div.appendChild(ul)
+              ul.removeChild(li)
+              document.body.appendChild(div)
+              document.body.appendChild(ul)
+
+              /////////////////////////////
+
+          var fam = deleteFamily(family)
+
+            var divTwo = document.getElementById("family")
+
+            var ul = document.querySelector("ul")
+
+            var li = document.querySelector("li")
+
+            li.innerText = fam
+
+             divTwo.appendChild(ul)
+              ul.removeChild(li)
+              document.body.appendChild(divTwo)
+              document.body.appendChild(ul)
+
+              /////////////////////////////
+
+
+            var work = deleteCoworkers(coworkers)
+
+              var divThree = document.getElementById("work")
+
+                var ul = document.querySelector("ul")
+
+                var li = document.querySelector("li")
+
+                li.innerText = work
+
+                 divThree.appendChild(ul)
+                  ul.removeChild(li)
+
+                document.body.appendChild(divThree)
+                document.body.appendChild(ul)
+
+
+
+      });
+
+     </script>
+
+</body>
+</html>
+
