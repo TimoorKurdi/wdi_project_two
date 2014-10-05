@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>WDI Project Two</title>
+  <title>WDI Project Two</title>
 </head>
 <body>
 
@@ -26,16 +26,27 @@
 
        <button id="deletebutton"></button>
 
-        <input type="text" id="category1" value="Edit Me">
-        <input type="text" id="category2" value="Edit Me">
-        <input type="text" id="category3" value="Edit Me">
-
-         <!-- <input type="text" id="mytext2" value="Edit Content Here">
+          <input type="text" id="mytext1" value="Edit Content Here">
+          <input type="text" id="mytext2" value="Edit Content Here">
           <input type="text" id="mytext3" value="Edit Content Here">
-           <input type="text" id="mytext4" value="Edit Content Here">
-            <input type="text" id="mytext5" value="Edit Content Here">
-            <input type="text" id="mytext6" value="Edit Content Here"> -->
-       <button id="editbutton"></button>
+          <input type="text" id="mytext4" value="Edit Content Here">
+          <input type="text" id="mytext5" value="Edit Content Here">
+          <input type="text" id="mytext6" value="Edit Content Here">
+
+          <input type="text" id="mytext7" value="Edit Content Here">
+          <input type="text" id="mytext8" value="Edit Content Here">
+          <input type="text" id="mytext9" value="Edit Content Here">
+          <input type="text" id="mytext10" value="Edit Content Here">
+          <input type="text" id="mytext11" value="Edit Content Here">
+
+          <input type="text" id="mytext12" value="Edit Content Here">
+          <input type="text" id="mytext13" value="Edit Content Here">
+          <input type="text" id="mytext14" value="Edit Content Here">
+          <input type="text" id="mytext15" value="Edit Content Here">
+
+
+
+      <button id="editbutton"></button>
 
 
 
@@ -132,122 +143,58 @@
 
    editbutton.addEventListener("click", function() {
 
-      var editCategoryOne = document.getElementById("category1").value;
+      var editOne = document.getElementById("mytext1").value;
+      var EditFrndLiOne = document.getElementById("frnd").children[0].innerHTML = editOne;
 
-      var EditFrndLiOne = document.getElementById("frnd").children[0].innerHTML = editCategoryOne;
-      var EditFrndLiTwo = document.getElementById("frnd").children[1].innerHTML = editCategoryOne;
-      var EditFrndLiThree = document.getElementById("frnd").children[2].innerHTML = editCategoryOne;
-      var EditFrndLiFour = document.getElementById("frnd").children[3].innerHTML = editCategoryOne;
-      var EditFrndLiFive = document.getElementById("frnd").children[4].innerHTML = editCategoryOne;
-      var EditFrndLiSix = document.getElementById("frnd").children[5].innerHTML = editCategoryOne;
+      var editTwo = document.getElementById("mytext2").value;
+      var EditFrndLiTwo = document.getElementById("frnd").children[1].innerHTML = editTwo;
 
-                      //////////////////////////////////////////////////////
+      var editThree = document.getElementById("mytext3").value;
+      var EditFrndLiThree = document.getElementById("frnd").children[2].innerHTML = editThree;
 
-      var editCategoryTwo = document.getElementById("category2").value;
+      var editFour = document.getElementById("mytext4").value;
+      var EditFrndLiFour = document.getElementById("frnd").children[3].innerHTML = editFour;
 
-      var EditFamLiOne = document.getElementById("familia").children[0].innerHTML = editCategoryTwo;
-      var EditFamLiTwo = document.getElementById("familia").children[1].innerHTML = editCategoryTwo;
-      var EditFamLiThree = document.getElementById("familia").children[2].innerHTML = editCategoryTwo;
-      var EditFamLiFour = document.getElementById("familia").children[3].innerHTML = editCategoryTwo;
-      var EditFamLiFive = document.getElementById("familia").children[4].innerHTML = editCategoryTwo;
+      var editFive = document.getElementById("mytext5").value;
+      var EditFrndLiFive = document.getElementById("frnd").children[4].innerHTML = editFive;
 
-                      //////////////////////////////////////////////////////
+      var editSix = document.getElementById("mytext6").value;
+      var EditFrndLiSix = document.getElementById("frnd").children[5].innerHTML = editSix;
 
-      var editCategoryThree = document.getElementById("category3").value;
+                  //////////////////////////////////////////////
 
-      var EditCoworkersLiOne = document.getElementById("job").children[0].innerHTML = editCategoryThree;
-      var EditCoworkersLiTwo = document.getElementById("job").children[1].innerHTML = editCategoryThree;
-      var EditCoworkersLiThree = document.getElementById("job").children[2].innerHTML = editCategoryThree;
-      var EditCoworkersLiFour = document.getElementById("job").children[3].innerHTML = editCategoryThree;
+      var editSeven = document.getElementById("mytext7").value;
+      var EditFrndLiSeven = document.getElementById("familia").children[0].innerHTML = editSeven;
 
+      var editEight = document.getElementById("mytext8").value;
+      var EditFrndLiEight = document.getElementById("familia").children[1].innerHTML = editEight;
 
-      console.log("It works")
+      var editNine = document.getElementById("mytext9").value;
+      var EditFrndLiNine = document.getElementById("familia").children[2].innerHTML = editNine;
 
-           // var x = document.getElementById("myText").value;
-           //  document.getElementById("demo").innerHTML = x;
+      var editTen = document.getElementById("mytext10").value;
+      var EditFrndLiTen = document.getElementById("familia").children[3].innerHTML = editTen;
 
-          // var newText = editTxtOne;
-          // newText.innerText = "Hello World"
-          // newText.innerText = getEditLi.value
-
-          // editTxtOne.value = getEditLi;
-          // var editTxtTwo = document.getElementById("mytext2").value;
-          // var editTxtThree = document.getElementById("mytext3").value;
-          // var editTxtFour = document.getElementById("mytext4").value;
-          // var editTxtFive = document.getElementById("mytext5").value;
-          // var editTxtSix = document.getElementById("mytext6").value;
-
-            // var editFrndLiOne = document.getElementById("frnd").children[0].innerHTML = editTxtOne;
-            // var editFrndLiTwo = document.getElementById("frnd").children[1].innerHTML = editTxtTwo;
-            // var editFrndLiThree = document.getElementById("frnd").children[2].innerHTML = editTxtThree;
-            // var editFrndLiFour = document.getElementById("frnd").children[3].innerHTML = editTxtFour;
-            // var editFrndLiFive = document.getElementById("frnd").children[4].innerHTML = editTxtFive;
-            // var editFrndLiSix = document.getElementById("frnd").children[5].innerHTML = editTxtSix;
-           //var editFrndUlThree = document.getElementById("frnd").children[2];
-          // var editFrndUlFour = document.getElementById("frnd").children[3];
-          // var editFrndUlFive = document.getElementById("frnd").children[4];
-          // var editFrndUlSix = document.getElementById("frnd").children[5];
-
-          // editFrndUlOne.innerText = "Good"
-
-          // editFrndUlTwo.innerText = "Morning"
-          // editFrndUlThree.innerText = "Vietnam"
-          // editFrndUlFour.innerText = "Hello"
-          // editFrndUlFive.innerText = "World"
-          // editFrndUlSix.innerText = "I said Hellooo World"
-
-    //       var editFamUlOne = document.getElementById("familia").children[0];
-    //       var editFamUlTwo = document.getElementById("familia").children[1];
-    //       var editFamUlThree = document.getElementById("familia").children[2];
-    //       var editFamUlFour = document.getElementById("familia").children[3];
-    //       var editFamUlFive = document.getElementById("familia").children[4];
-
-    //       editFamUlOne.innerText = "Testing"
-    //       editFamUlTwo.innerText = "1"
-    //       editFamUlThree.innerText = "2"
-    //       editFamUlFour.innerText = "3"
-    //       editFamUlFive.innerText = "Testing Testing"
-
-    //       var editCoworkersUlOne = document.getElementById("job").children[0];
-    //       var editCoworkersUlTwo = document.getElementById("job").children[1];
-    //       var editCoworkersUlThree = document.getElementById("job").children[2];
-    //       var editCoworkersUlFour = document.getElementById("job").children[3];
-
-    // editCoworkersUlOne.innerText = "Check"
-    // editCoworkersUlTwo.innerText = "1"
-    // editCoworkersUlThree.innerText = "2"
-    // editCoworkersUlFour.innerText = "3"
-
-          // editFrndLi.appendChild(newFrndLi)
-
-        // var editFamLi = document.getElementById("litwo")
-
-        // var editWorkLi = document.getElementById("lithree")
+      var editEleven = document.getElementById("mytext11").value;
+      var EditFrndLiEleven = document.getElementById("familia").children[4].innerHTML = editEleven;
 
 
+                      //////////////////////////////////////////////
 
-            // editFamLi.removeChild(editFamLi.firstChild)
+      var editTwelve = document.getElementById("mytext12").value;
+      var EditFrndLiTwelve = document.getElementById("job").children[0].innerHTML = editTwelve;
 
-            // editWorkLi.removeChild(editWorkLi.firstChild)
+      var editThirteen = document.getElementById("mytext13").value;
+      var EditFrndLiThirteen = document.getElementById("job").children[1].innerHTML = editThirteen;
 
+      var editFourteen = document.getElementById("mytext14").value;
+      var EditFrndLiFourteen = document.getElementById("job").children[2].innerHTML = editFourteen;
 
-
-            // var newFamLi = document.createElement("li")
-
-            // var newWorkLi = document.createElement("li")
-
-
-
-        // newFamLi.innerText = "Morning"
-
-        // newWorkLi.innerText = "Vietnam"
+      var editFifteen = document.getElementById("mytext15").value;
+      var EditFrndLiFifteen = document.getElementById("job").children[3].innerHTML = editFifteen;
 
 
-    // editFamLi.appendChild(newFamLi)
-    // editWorkLi.appendChild(newWorkLi)
-
-
-      });
+  });
 
           var deleteButton = document.getElementById("deletebutton")
           deleteButton.innerText = "Delete"
