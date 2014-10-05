@@ -26,10 +26,10 @@
 
        <button id="deletebutton"></button>
 
-        <!-- <form>
-        <input type="text" placeholder="Edit"> -->
+ <!--        <form> -->
+       <!--  <input type="text" placeholder="Edit"> -->
        <button id="editbutton"></button>
-  <!--       </form> -->
+ <!--        </form> -->
 
 
        <script type="text/javascript">
@@ -118,22 +118,75 @@
 
       });
 
-      var editbutton = document.getElementById("editbutton")
-      editbutton.innerText = "Edit"
+   var editbutton = document.getElementById("editbutton")
+   editbutton.innerText = "Edit"
 
-       editbutton.addEventListener("click", function() {
+   editbutton.addEventListener("click", function() {
 
-          var editFrndLi = document.getElementById("lione");
+          var editFrndUlOne = document.getElementById("frnd").children[0];
+          var editFrndUlTwo = document.getElementById("frnd").children[1];
+          var editFrndUlThree = document.getElementById("frnd").children[2];
+          var editFrndUlFour = document.getElementById("frnd").children[3];
+          var editFrndUlFive = document.getElementById("frnd").children[4];
+          var editFrndUlSix = document.getElementById("frnd").children[5];
 
-            editFrndLi.removeChild(editFrndLi.firstChild)
+          editFrndUlOne.innerText = "Good"
+          editFrndUlTwo.innerText = "Morning"
+          editFrndUlThree.innerText = "Vietnam"
+          editFrndUlFour.innerText = "Hello"
+          editFrndUlFive.innerText = "World"
+          editFrndUlSix.innerText = "I said Hellooo World"
 
-            var newli = document.createElement("li")
+          var editFamUlOne = document.getElementById("familia").children[0];
+          var editFamUlTwo = document.getElementById("familia").children[1];
+          var editFamUlThree = document.getElementById("familia").children[2];
+          var editFamUlFour = document.getElementById("familia").children[3];
+          var editFamUlFive = document.getElementById("familia").children[4];
 
-            newli.innerText = "Hello"
+          editFamUlOne.innerText = "Testing"
+          editFamUlTwo.innerText = "1"
+          editFamUlThree.innerText = "2"
+          editFamUlFour.innerText = "3"
+          editFamUlFive.innerText = "Testing Testing"
 
-            editFrndLi.appendChild(newli)
+          var editCoworkersUlOne = document.getElementById("job").children[0];
+          var editCoworkersUlTwo = document.getElementById("job").children[1];
+          var editCoworkersUlThree = document.getElementById("job").children[2];
+          var editCoworkersUlFour = document.getElementById("job").children[3];
 
-            console.log("Testing edit feature")
+    editCoworkersUlOne.innerText = "Check"
+    editCoworkersUlTwo.innerText = "1"
+    editCoworkersUlThree.innerText = "2"
+    editCoworkersUlFour.innerText = "3"
+
+          // editFrndLi.appendChild(newFrndLi)
+
+        // var editFamLi = document.getElementById("litwo")
+
+        // var editWorkLi = document.getElementById("lithree")
+
+
+
+            // editFamLi.removeChild(editFamLi.firstChild)
+
+            // editWorkLi.removeChild(editWorkLi.firstChild)
+
+
+
+            // var newFamLi = document.createElement("li")
+
+            // var newWorkLi = document.createElement("li")
+
+
+
+        // newFamLi.innerText = "Morning"
+
+        // newWorkLi.innerText = "Vietnam"
+
+
+    // editFamLi.appendChild(newFamLi)
+    // editWorkLi.appendChild(newWorkLi)
+
 
       });
 
