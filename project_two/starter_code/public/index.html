@@ -26,6 +26,11 @@
 
        <button id="deletebutton"></button>
 
+        <!-- <form>
+        <input type="text" placeholder="Edit"> -->
+       <button id="editbutton"></button>
+  <!--       </form> -->
+
 
        <script type="text/javascript">
 
@@ -113,31 +118,50 @@
 
       });
 
-      var deleteButton = document.getElementById("deletebutton")
-      deleteButton.innerText = "Delete"
+      var editbutton = document.getElementById("editbutton")
+      editbutton.innerText = "Edit"
 
-      deleteButton.addEventListener("click", function() {
+       editbutton.addEventListener("click", function() {
 
-              var frndList = document.getElementById("frnd");
-              var familiaList  = document.getElementById("familia");
-              var jobList  = document.getElementById("job");
+          var editFrndLi = document.getElementById("lione");
 
-                frndItemsCount = frndList.children.length;
-                familiaItemsCount = familiaList.children.length;
-                jobItemsCount = jobList.children.length;
+            editFrndLi.removeChild(editFrndLi.firstChild)
 
-              if (frndItemsCount > 0 ) {
-                     frndList.removeChild(frndList.firstChild);
-              } else if (familiaItemsCount > 0) {
-                    familiaList.removeChild(familiaList.firstChild);
-              } else if (jobItemsCount > 0) {
-                    jobList.removeChild(jobList.firstChild);
-              } else {
-                 console.log("Nothing to remove.");
+            var newli = document.createElement("li")
 
-           }
+            newli.innerText = "Hello"
 
-     });
+            editFrndLi.appendChild(newli)
+
+            console.log("Testing edit feature")
+
+      });
+
+          var deleteButton = document.getElementById("deletebutton")
+          deleteButton.innerText = "Delete"
+
+          deleteButton.addEventListener("click", function() {
+
+                  var frndList = document.getElementById("frnd");
+                  var familiaList  = document.getElementById("familia");
+                  var jobList  = document.getElementById("job");
+
+                    frndItemsCount = frndList.children.length;
+                    familiaItemsCount = familiaList.children.length;
+                    jobItemsCount = jobList.children.length;
+
+                  if (frndItemsCount > 0 ) {
+                         frndList.removeChild(frndList.firstChild);
+                  } else if (familiaItemsCount > 0) {
+                        familiaList.removeChild(familiaList.firstChild);
+                  } else if (jobItemsCount > 0) {
+                        jobList.removeChild(jobList.firstChild);
+                  } else {
+                     console.log("Nothing to remove.");
+
+               }
+
+         });
 
     </script>
 
