@@ -2,49 +2,58 @@ var friends = [" Jeff " , " Joe " , " Adrian " , " Neel " , " JeffK " , " Sean "
 
 var button = document.getElementById("createbutton");
 
-button.addEventListener("click", function() {
-  addAllFriends(friends);
-  button.innerText = "Create a New Friend";
-  button.addEventListener("click", function() {
-    var div = document.getElementById("friend");
-    div.innerHTML = "";
-    var friendNameLabel = document.createElement("label");
-    var friendNameSpan = document.createElement("span");
-    friendNameSpan.innerText = "Enter a Name: ";
-    friendNameLabel.appendChild(friendNameSpan);
-    var friendNameInput = document.createElement("input");
-    friendNameInput.type = "text";
-    friendNameInput.id = "name_input";
-    friendNameInput.name = "name";
-    friendNameLabel.appendChild(friendNameInput);
-    div.appendChild(friendNameLabel);
-    var submitButton = document.createElement("button");
-    submitButton.innerHTML = "Submit Friend";
-    submitButton.addEventListener("click", function() {
-      var friendNameInput = document.querySelector("#name_input");
-      var newName = friendNameInput.value;
-      friends.push(newName);
-      div.innerHTML = "";
-      addAllFriends(friends);
+addAllFriends(friends);
 
-    });
-    div.appendChild(submitButton);
+button.addEventListener("click", function() {
+  var div = document.getElementById("friend");
+  div.innerHTML = "";
+  var friendNameLabel = document.createElement("label");
+  var friendNameSpan = document.createElement("span");
+  friendNameSpan.innerText = "Enter a Name: ";
+  friendNameLabel.appendChild(friendNameSpan);
+  var friendNameInput = document.createElement("input");
+  friendNameInput.type = "text";
+  friendNameInput.id = "name_input";
+  friendNameInput.name = "name";
+  friendNameLabel.appendChild(friendNameInput);
+  div.appendChild(friendNameLabel);
+  var submitButton = document.createElement("button");
+  submitButton.innerHTML = "Submit Friend";
+  submitButton.addEventListener("click", function() {
+    var friendNameInput = document.querySelector("#name_input");
+    var newName = friendNameInput.value;
+    friends.push(newName);
+    div.innerHTML = "";
+    addAllFriends(friends);
+
   });
+  div.appendChild(submitButton);
 });
 
-
+// var ajaxbutton = document.getElementById('ajaxcall');
+// ajaxbutton.addEventListener('click', function() {
+//   console.log('in button click')
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('GET', 'http://api.randomuser.me', true);
+//   xhr.addEventListener('load', function() {
+//     var response = JSON.parse(xhr.response);
+//     var img = response.results[0].user.picture.medium;
+//     var image = document.createElement("img");
+//     document.body.appendChild(image);
+//     image.src = img;
+//   });
+//   xhr.send();
+// });
 
 function addAllFriends(arr) {
   var div = document.getElementById("friend");
   var header = document.createElement("h2");
-  header.innerText = "friend";
+  header.innerText = "Friends";
   div.appendChild(header);
   var addUl = document.createElement("ul");
   div.appendChild(addUl);
 
-
-  for (var i = 0; i < arr.length; i++) {
-    var friend = arr[i];
+  arr.forEach(function(friend) {
 
     var addLi = document.createElement("li");
 
@@ -52,6 +61,18 @@ function addAllFriends(arr) {
     var editbutton = document.createElement("button");
     var deletebutton = document.createElement("button");
     var label = document.createElement('label');
+    var image = document.createElement('img');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://api.randomuser.me', true);
+    xhr.addEventListener('load', function() {
+      var response = JSON.parse(xhr.response);
+      var imgurl = response.results[0].user.picture.medium;
+
+      image.src = imgurl;
+    });
+    xhr.send();
+
 
     label.innerText = friend;
     editbutton.innerText = "Edit";
@@ -61,33 +82,16 @@ function addAllFriends(arr) {
     addLi.appendChild(input);
     addLi.appendChild(editbutton);
     addLi.appendChild(deletebutton);
+    addLi.appendChild(image);
     addUl.appendChild(addLi);
 
-    var ajaxbutton = document.getElementById('ajaxcall');
-    ajaxbutton.addEventListener('click', function() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://api.randomuser.me', true);
-      xhr.addEventListener('load', function() {
-        var response = JSON.parse(xhr.response);
-        var img = response.results[0].user.picture.medium;
-        var image = document.createElement("img");
-        document.body.appendChild(image);
-        image.src = img;
-      });
-      xhr.send();
-    });
 
     deletebutton.addEventListener("click", function(e) {
       var myself = e.target;
       var myparent = myself.parentNode;
-      var addLi = document.querySelector("li");
-      var inputToBeDeleted = myparent.querySelector("input");
-      var label = myparent.querySelector("label");
-      var remove = label.innerText = "";
-      remove = input.innerText;
+      var mygrandparent = myparent.parentNode;
+      mygrandparent.removeChild(myparent);
       console.log("DELETED");
-      addLi.removeChild(label);
-      addLi.removeChild(inputToBeDeleted);
     });
 
     editbutton.addEventListener("click", function(e) {
@@ -103,5 +107,6 @@ function addAllFriends(arr) {
       // Then we call the innertext method on the label tag and set it to the value that we type in to the label tag effectively replacing the value of the li with the value that is typed in when the edit button is clicked and the event is triggered.
       console.log("EDITED");
     });
-  }
+
+  });
 }
