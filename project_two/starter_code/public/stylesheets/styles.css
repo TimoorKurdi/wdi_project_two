@@ -1,4 +1,12 @@
-/*div.row{
-  text-align: left;
-  color: blue;
+body {
+  background-color: green;
+}
+
+/*h2 {
+  text-align: center;
 }*/
+
+li {
+  display: inline-block;
+}
+
